@@ -1,11 +1,11 @@
 <template>
-    <header>
+    <header class="bg-slate-600">
         <nav>
             <ul>
                 <li><NuxtLink to="/">Home</NuxtLink></li>
                 <li><NuxtLink to="/about">About</NuxtLink></li>
-                <li><NuxtLink to="/posts/1">Post 1</NuxtLink></li>
-                <li><NuxtLink to="/posts/2">Post 2</NuxtLink></li>
+                <li><NuxtLink to="/travel">Travel|旅遊</NuxtLink></li>
+                <li><NuxtLink to="/blog/01helloworld">hello-world</NuxtLink></li>
             </ul>
         </nav>
     </header>

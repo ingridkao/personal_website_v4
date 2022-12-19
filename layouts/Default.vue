@@ -1,5 +1,6 @@
 <template>
-    <AppHeader />
-    <slot />
-    <AppFooter />
+    <main>
+        預設
+        <slot />
+    </main>
 </template>

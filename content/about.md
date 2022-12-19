@@ -1,9 +1,9 @@
 ---
-layout: custom
+layout: about
 ---
 
 # About
 
-This page is using the `layouts/custom.vue` layout.
+This page is using the `layouts/about.vue` layout.
 
 [Back home](/)

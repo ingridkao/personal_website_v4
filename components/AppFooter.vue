@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="bg-slate-500">
         footer
     </footer>
 </template>

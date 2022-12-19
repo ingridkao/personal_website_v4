@@ -1,5 +1,5 @@
 export default defineAppConfig({
-    title: 'Hello Nuxt',
+    title: 'IngridKao',
     theme: {
         dark: true,
         colors: {
