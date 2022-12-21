@@ -1,4 +1,4 @@
-# personal_website_nuxt3
+# personal_website_v4
 
 Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
 
