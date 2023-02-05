@@ -31,6 +31,9 @@ export default defineNuxtConfig({
 			{ name: 'description', content: 'Ingridkao\'s site.' },
 			// { property: 'og:title', content: `Ingridkao - ${route.meta.title}` }
 		  ]
-		}
+		},
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ]
 	}
 })
