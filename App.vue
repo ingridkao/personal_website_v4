@@ -2,8 +2,6 @@
     <AppHeader />
 
     <NuxtPage />
-
-    <AppFooter /> 
 </template>
 
 <style>
