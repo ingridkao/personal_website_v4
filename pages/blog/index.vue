@@ -1,16 +1,18 @@
 <script setup>
-    const {path} = useRoute()
-    const navs = await queryContent(path).find()
+    // const {path} = useRoute()
+    const navs = await queryContent('blog').find()
 </script>
 
 <template>
-    <nav>
-        <ul>            
-            <li v-for="(link, index) in navs" :key="index">
-                <NuxtLink :to="link._path">
-                    {{link.title}}
-                </NuxtLink>
-            </li>
-        </ul>
-    </nav>
+    <main>
+        <nav v-if="navs" class="flex justify-start lg:w-0 lg:flex-1">
+            <NuxtLink 
+                v-for="link in navs" 
+                :key="link._path"
+                :to="link._path"
+            >
+                {{link.title}}
+            </NuxtLink>
+        </nav>
+    </main>
 </template>

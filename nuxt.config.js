@@ -9,7 +9,9 @@ export default defineNuxtConfig({
 			fields: ['publishedAt']
 		}
 	},
-	css: ['~/assets/css/main.css'],
+	css: [
+		'~/assets/css/main.css'
+	],
 	postcss: {
 		plugins: {
 			tailwindcss: {},
@@ -34,6 +36,17 @@ export default defineNuxtConfig({
 		},
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-        ]
-	}
+        ],
+		script: [
+			{
+			  src: "https://www.googletagmanager.com/gtag/js?id=G-Q897XJT2E0",
+			  async: true,
+			},
+			{ src: "/js/analitics.js" },
+			{
+				src: "https://www.travelpayouts.com/money_script/money_script.js?marker=411780",
+				async: true,
+			}
+		]
+  	}
 })

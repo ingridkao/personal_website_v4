@@ -1,16 +1,20 @@
 <script setup>
-    const {path} = useRoute()
-    const navs = await queryContent(path).find()
+    const navs = await queryContent('travel').find()
 </script>
 
 <template>
-    <nav>
-        <ul>            
-            <li v-for="(link, index) in navs" :key="index">
-                <NuxtLink :to="link._path">
-                    {{link.title}}
-                </NuxtLink>
-            </li>
-        </ul>
-    </nav>
+    <main>
+        <div class="map">
+            <!-- 想做地圖 -->
+        </div>
+        <nav v-if="navs" class="flex flex-col justify-start lg:w-0 lg:flex-1">
+            <NuxtLink 
+                v-for="link in navs" 
+                :key="link.id"
+                :to="link._path"
+            >
+                {{link.title}}
+            </NuxtLink>
+        </nav>
+    </main>
 </template>
