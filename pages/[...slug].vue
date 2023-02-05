@@ -5,9 +5,12 @@
 
 <template>
     <main>
-        <h1 class="text-3xl font-bold underline">
-            {{route.params}}
-        </h1>
+        <section class="hero-section">
+            <header>
+                <h1 class="text-3xl font-bold underline">Welcome to my site</h1>
+                <p>Take a look at <NuxtLink to="/blog">my blog</NuxtLink></p>
+            </header>
+        </section>
         <hr>
         <ContentDoc />
         <hr>
@@ -16,3 +19,5 @@
         </AppAlert>
     </main>
 </template>
+
+<style scoped> /* ... */ </style>

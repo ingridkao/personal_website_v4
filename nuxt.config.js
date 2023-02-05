@@ -1,6 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-	modules: ['@nuxt/content'],
+	modules: [
+		'@nuxt/content'
+	],
 	content: {
 		documentDriven: true,
 		navigation: {
@@ -27,7 +29,7 @@ export default defineNuxtConfig({
 		  title: 'IngridKao',
 		  meta: [
 			{ name: 'description', content: 'Ingridkao\'s site.' },
-			// { property: 'og:title', content: `App Name - ${route.meta.title}` }
+			// { property: 'og:title', content: `Ingridkao - ${route.meta.title}` }
 		  ]
 		}
 	}
