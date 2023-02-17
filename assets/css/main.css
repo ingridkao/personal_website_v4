@@ -5,3 +5,13 @@
 .prose :where(a):not(:where([class~="not-prose"] *)) {
     text-decoration-line: none;
 }
+
+.task-list-item::marker{
+    color: transparent;
+}
+
+p img{
+    max-height: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+}

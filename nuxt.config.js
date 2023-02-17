@@ -9,14 +9,24 @@ export default defineNuxtConfig({
 			fields: ['publishedAt']
 		}
 	},
-	css: [
-		'~/assets/css/main.css'
-	],
 	postcss: {
 		plugins: {
 			tailwindcss: {},
 			autoprefixer: {}
 		}
+	},
+	buildModules: [
+		'@nuxtjs/style-resources'
+	],
+	css: [
+		'~/assets/css/main.css',
+		'~/assets/scss/main.scss'
+	],
+	styleResources: {
+		scss: [
+		  	'~/assets/scss/variables.scss',
+			'~/assets/scss/mixins.scss'
+		]
 	},
 	app: {
 		pageTransition: { 
