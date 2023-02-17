@@ -50,8 +50,6 @@ jobs:
       - name: Install Dependencies 👨🏻‍💻
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm i
-      - name: 🛠 Nuxt Build
-        run: npm build
 
   # Deployment job
   deploy:
@@ -59,7 +57,7 @@ jobs:
     needs: build
     steps:
       - name: 🛠 Nuxt Generate
-        run: npm generate
+        run: npm run generate
     
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
