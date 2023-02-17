@@ -29,9 +29,7 @@ jobs:
 
     steps:
       - name: Checkout🛎
-        uses: actions/checkout@v3
-
-      - uses: npm/action-setup@v3
+        uses: actions/checkout@master
         with:
           version: ${{ matrix.npm-version }}
 
