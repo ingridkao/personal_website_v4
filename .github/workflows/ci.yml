@@ -1,3 +1,4 @@
+# https://github.com/productdevbook/oku-nuxt3-template/blob/master/.github/workflows/ci.yml
 name: ci
 
 on:
@@ -8,36 +9,117 @@ on:
     branches:
       - master
 
+
 jobs:
-  ci:
+  install:
+    name: 📦 Install node modules
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [16.x]
+        node-version: [18]
+        npm-version: [7]
 
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
+      - name: Checkout🛎
+        uses: actions/checkout@v3
 
-      - name: Setup node env 🏗 ${{ matrix.node-version }}
+      - uses: npm/action-setup@v2.2.4
+        with:
+          version: ${{ matrix.npm-version }}
+
+      - name: Setup Node env 🏗${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
           cache: 'npm'
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: |
+            node_modules
+          key: modules-${{ hashFiles('npm-lock.yaml') }}
 
-      - name: Install dependencies 👨🏻‍💻
-        run: |
-          if [ -e package-lock.json ]; then
-          npm ci --prefer-offline --no-audit
-          else
-          npm i
-          fi
-      # - name: Run tests 🧪
-      #   run: |
-      #     if [ -e package-lock.json ]; then
-      #     npm run test
-      #     else
-      #     npm run test
-      #     fi
+      - name: Install Dependencies 👨🏻‍💻
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm i
+  
+  build:
+    name: 🚧 Nuxt build
+    needs: install
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18]
+        npm-version: [7]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: npm/action-setup@v2.2.4
+        with:
+          version: ${{ matrix.npm-version }}
+
+      - name: Set up Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+          key: modules-${{ hashFiles('npm-lock.yaml') }}
+
+      - name: 🛠 Nuxt Build
+        run: npm build
+
+  generate:
+    name: 🚧 Nuxt generate
+    needs: install
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18]
+        npm-version: [7]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: npm/action-setup@v2.2.4
+        with:
+          version: ${{ matrix.npm-version }}
+
+      - name: Set up Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+          key: modules-${{ hashFiles('npm-lock.yaml') }}
+     
+      - name: 🛠 Nuxt Generate
+        run: npm generate
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./dist
+      #     cname: www.ingridkao.net
