@@ -18,36 +18,42 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛎 Checkout
-        uses: actions/checkout@v3
-        
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            exit 0
-          elif [ -f "${{ github.workspace }}/package.json" ]; then
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
-            exit 0
-          else
-            echo "Unable to determine packager manager"
-            exit 1
-          fi
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+    name: 📦 Install node modules
+    runs-on: ${{ matrix.os }}
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18]
+        npm-version: [7]
+
+    steps:
+      - name: Checkout🛎
+        uses: actions/checkout@v3
+
+      - uses: npm/action-setup@v3
         with:
           version: ${{ matrix.npm-version }}
+
+      - name: Setup Node env 🏗${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: |
+            node_modules
+          key: modules-${{ hashFiles('npm-lock.yaml') }}
+
+      - name: Install Dependencies 👨🏻‍💻
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm i
+      - name: 🛠 Nuxt Build
+        run: npm build
 
   # Deployment job
   deploy:
@@ -58,7 +64,6 @@ jobs:
         run: npm generate
     
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
