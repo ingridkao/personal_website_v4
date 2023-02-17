@@ -33,11 +33,10 @@ jobs:
         with:
           version: ${{ matrix.npm-version }}
 
-      - name: Setup Node env 🏗${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Setup Node env 🏗
+        uses: actions/setup-node@v2.1.2
         with:
-          cache: 'npm'
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node }}
       
       - name: Cache node_modules
         uses: actions/cache@v3
@@ -45,14 +44,14 @@ jobs:
         with:
           path: |
             node_modules
-          key: modules-${{ hashFiles('npm-lock.yaml') }}
+          key: modules-${{ hashFiles('yarn-lock.yaml') }}
 
       - name: Install Dependencies 👨🏻‍💻
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm i
+        run: yarn
 
       - name: 🛠 Nuxt Build
-        run: npm run build
+        run: yarn build
 
   # Deployment job
   deploy:
@@ -60,7 +59,7 @@ jobs:
     needs: build
     steps:
       - name: 🛠 Nuxt Generate
-        run: npm run generate
+        run: yarn generate
     
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
