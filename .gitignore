@@ -1,8 +1,23 @@
+# Dependency directories
 node_modules
+
 *.log*
+
+# nuxt.js build output
 .nuxt
-.nitro
+
+# parcel-bundler cache (https://parceljs.org/)
 .cache
-.output
+
+# dotenv environment variables file
 .env
+
+# Nuxt generate
 dist
+
+# macOS
+.DS_Store
+
+.output
+
+.nitro

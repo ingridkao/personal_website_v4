@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,600|Noto+Serif+TC:200,600&display=swap');
+
+html {
+	width: 100%;
+
+	--title-font: 'Noto Sans TC', Tahoma;
+	--body-font: 'Noto Serif TC', sans-serif;
+
+	--btnColor: #FE016C;
+    --bgColor: #232323;
+    --bodyColor: #f4f4f4;
+}
+
+html[data-theme='dark'] {
+    --btnColor: #FFBD07;
+    --bgColor: #f4f4f4;
+    --bodyColor: #232323;
+}
+
+body {
+	min-height: 100vh;
+	background: var(--bodyColor);
+	color: var(--bgColor);
+
+	font-family: var(--body-font);
+	font-weight: 200;
+}
+
+h1, h2{
+	font-family: var(--title-font);
+    font-weight: 600;
+}
+
+h3, h4, h5{
+	font-family: var(--title-font);
+    font-weight: 400;
+}
+
+button, a{
+	font-family: var(--title-font);
+    font-weight: 400;
+	cursor: pointer;
+}
+
+h6{
+	font-family: var(--body-font);
+	font-weight: 600;
+}
+
+.tocBox{
+	ul li a{
+		font-family: var(--body-font);
+	}
+}
+
+
+
