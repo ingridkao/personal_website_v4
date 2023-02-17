@@ -22,9 +22,9 @@ jobs:
 
     steps:
       - name: Checkout🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@vmaster
 
-      - uses: npm/action-setup@v2.2.4
+      - uses: npm/action-setup@v3
         with:
           version: ${{ matrix.npm-version }}
 
@@ -61,7 +61,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: npm/action-setup@v2.2.4
+      - uses: npm/action-setup@v3
         with:
           version: ${{ matrix.npm-version }}
 
@@ -116,9 +116,9 @@ jobs:
       - name: 🛠 Nuxt Generate
         run: npm generate
 
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./dist
-      #     cname: www.ingridkao.net
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: www.ingridkao.net
