@@ -50,6 +50,8 @@ jobs:
         run: yarn
 
       - name: 🛠 Nuxt Generate
+        env:
+          NUXT_APP_CDN_URL: ${{ secrets.NUXT_APP_CDN_URL }}
         run: yarn generate
 
       - name: Deploy to GitHub Pages
