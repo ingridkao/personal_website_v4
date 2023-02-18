@@ -50,15 +50,15 @@ jobs:
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: yarn
 
-      - name: 🛠 Nuxt Build
-        run: yarn build
-
       - name: 🛠 Nuxt Generate
         run: yarn generate
+
+      # - name: Deploy to GitHub Page
+      #   run: yarn deploy
     
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: .output/public
           cname: www.ingridkao.net
