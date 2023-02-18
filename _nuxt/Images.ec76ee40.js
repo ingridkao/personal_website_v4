@@ -1,1 +1,0 @@
-import{o as s,a as n,u as c}from"./entry.946d6c57.js";const l=["src","alt"],_={__name:"Images",props:{path:{type:String,default:""},alt:{type:String,default:""}},setup(e){const t=e,a={}.npm_lifecycle_event==="generate"?"/personal_website_v4":"";return(r,o)=>(s(),n("img",{src:`${c(a)}${t.path}`,alt:t.alt,class:"max-h-96 mx-auto"},null,8,l))}};export{_ as default};
