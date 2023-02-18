@@ -9,9 +9,3 @@
 .task-list-item::marker{
     color: transparent;
 }
-
-p img{
-    max-height: 25rem;
-    margin-left: auto;
-    margin-right: auto;
-}
