@@ -1,5 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 const BaseURL = process.env.npm_lifecycle_event === 'generate'? '/personal_website_v4/': '/'
+const CdnURL = process.env.npm_lifecycle_event === 'generate'? 'https://ingridkao.github.io/personal_website_v4/': ''
 
 export default defineNuxtConfig({
 	modules: [
@@ -32,6 +33,7 @@ export default defineNuxtConfig({
 	},
 	app: {
 		baseURL: BaseURL,
+		cdnUrl: CdnURL,
 		pageTransition: { 
 			name: 'page', 
 			mode: 'out-in'

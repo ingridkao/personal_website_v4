@@ -16,7 +16,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # deploy job
   deploy:
     name: 📦 Install node modules
     runs-on: ${{ matrix.os }}
@@ -53,9 +52,6 @@ jobs:
       - name: 🛠 Nuxt Generate
         run: yarn generate
 
-      # - name: Deploy to GitHub Page
-      #   run: yarn deploy
-    
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
