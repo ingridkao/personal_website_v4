@@ -1,4 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+const BaseURL = process.env.npm_lifecycle_event === 'generate'? '/personal_website_v4/': '/'
+
 export default defineNuxtConfig({
 	modules: [
 		'@nuxt/content'
@@ -29,6 +31,7 @@ export default defineNuxtConfig({
 		]
 	},
 	app: {
+		baseURL: BaseURL,
 		pageTransition: { 
 			name: 'page', 
 			mode: 'out-in'
@@ -40,8 +43,7 @@ export default defineNuxtConfig({
 		head: {
 		  title: 'IngridKao',
 		  meta: [
-			{ name: 'description', content: 'Ingridkao\'s site.' },
-			// { property: 'og:title', content: `Ingridkao - ${route.meta.title}` }
+			{ name: 'description', content: 'Ingridkao\'s site.' }
 		  ]
 		},
         link: [
