@@ -15,6 +15,6 @@
     <img 
         :src="`${publicURL}${props.path}`"
         :alt="props.alt"
-        class="max-h-96 mx-auto" 
+        class="max-h-96 h-full mx-auto"
     />
 </template>

@@ -21,7 +21,9 @@
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                     <NuxtLink to="/">
                         <span class="sr-only">IngridKao</span>
-                        <img class="h-8 w-auto sm:h-10" :src="'/img/icon.png'" alt="IngridKao icon">
+                        <div class="h-8 w-auto sm:h-10">
+                            <Images :path="'/img/icon.png'" :alt="'IngridKao icon'"></Images>
+                        </div>
                     </NuxtLink>
                 </div>
                 <div class="-my-2 -mr-2 md:hidden">
@@ -125,7 +127,9 @@
                 <div class="px-5 pt-5 pb-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <img class="h-8 w-auto" :src="'/img/icon.png'" alt="IngridKao icon">
+                            <div class="h-8 w-auto">
+                                <Images :path="'/img/icon.png'" :alt="'IngridKao icon'"></Images>
+                            </div>
                         </div>
                         <div class="-mr-2">
                             <button type="button" @click="toggleMenu" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
