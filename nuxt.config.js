@@ -1,25 +1,19 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
 	modules: [
+		'@nuxtjs/tailwindcss',
 		'@nuxt/content'
 	],
-	content: {
-		documentDriven: true,
-		navigation: {
-			fields: ['publishedAt']
-		}
-	},
-	postcss: {
-		plugins: {
-			tailwindcss: {},
-			autoprefixer: {}
-		}
-	},
 	buildModules: [
 		'@nuxtjs/style-resources'
 	],
+	postcss: {
+		plugins: {
+			autoprefixer: {}
+		}
+	},
 	css: [
-		'~/assets/css/main.css',
+		'~/assets/css/tailwind.css',
 		'~/assets/scss/main.scss'
 	],
 	styleResources: {
@@ -27,6 +21,12 @@ export default defineNuxtConfig({
 		  	'~/assets/scss/variables.scss',
 			'~/assets/scss/mixins.scss'
 		]
+	},
+	content: {
+		documentDriven: true,
+		navigation: {
+			fields: ['publishedAt']
+		}
 	},
 	app: {
 		baseURL: '/personal_website_v4/',
