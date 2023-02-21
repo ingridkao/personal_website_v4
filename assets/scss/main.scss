@@ -9,12 +9,16 @@ html {
 	--btnColor: #FE016C;
     --bgColor: #232323;
     --bodyColor: #f4f4f4;
-}
-
-html[data-theme='dark'] {
-    --btnColor: #FFBD07;
-    --bgColor: #f4f4f4;
-    --bodyColor: #232323;
+	&.dark-mode{
+		--btnColor: #FFBD07;
+		--bgColor: #f4f4f4;
+		--bodyColor: #232323;
+	}
+	&.sepia-mode {
+		// --btnColor: #FFBD07;
+		// --bgColor: #f4f4f4;
+		// --bodyColor: #232323;
+	}
 }
 
 body {

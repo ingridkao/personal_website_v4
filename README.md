@@ -55,3 +55,37 @@ npm install -D @nuxtjs/tailwindcss
         Tailwind Viewer:```http://localhost:3000/_tailwind/```
         > 再開發的時候可以確認class的style
             詳細安裝細節可以參考(Ryan學習筆記)[https://ithelp.ithome.com.tw/articles/10294705]
+    
+    5. Darkmode依賴:```@nuxtjs/color-mode```
+
+        1. 安裝
+            ```bash
+            npm install --save-dev @nuxtjs/color-mode
+            ```
+        
+        2. Config ```nuxt.config.ts```
+            ```bash
+            export default defineNuxtConfig({
+                buildModules: [
+                    '@nuxtjs/color-mode'
+                ]
+            })
+        3. 測試在vue中能不能被讀取
+            ```html
+                 <h1>Color mode: {{ $colorMode.value }}</h1>
+            ```
+            
+        4. 安裝後碰到的問題
+            出現```Property "$colorMode" was accessed during render but is not defined on instance.```
+            我的解法是不要放在```buildModules```而是和```@nuxtjs/tailwindcss```放在一起
+            ```bash
+            export default defineNuxtConfig({
+                modules: [
+                    '@nuxtjs/color-mode',
+                    '@nuxtjs/tailwindcss'
+                ]
+            })
+            ```
+
+        > (參考)[https://tailwindcss.nuxtjs.org/examples/dark-mode/]
+
