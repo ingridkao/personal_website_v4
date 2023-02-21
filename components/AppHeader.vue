@@ -15,7 +15,7 @@
     }
 </script>
 <template>
-    <div class="relative bg-white">
+    <div class="relative bg-white dark:bg-gray-900">
         <div class="mx-auto max-w-7xl px-6">
             <div class="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
@@ -53,8 +53,7 @@
                             >
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg>
-                        </button>
-
+                        </button>   
                         <!--
                             'More' flyout menu, show/hide based on flyout menu state.
 
@@ -107,6 +106,7 @@
                             </div>
                         </div>
                     </div>
+                    <ColorModeBtn />
                 </nav>
             </div>
         </div>

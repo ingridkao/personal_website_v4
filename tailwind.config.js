@@ -13,11 +13,23 @@ module.exports = {
 		"content/**/*.md"
 	],
 	theme: {
-		extend: {
-			colors: {
-				primary: defaultTheme.colors.green
-			}
-		}
+		// extend: {
+		// 	colors: {
+		// 		primary: defaultTheme.colors.green
+		// 	}
+		// }
+	},
+	darkMode: 'class',
+	variants: {
+		backgroundColor: [
+		  "dark",
+		  "dark-hover",
+		  "dark-group-hover",
+		  "dark-even",
+		  "dark-odd"
+		],
+		borderColor: ["dark", "dark-focus", "dark-focus-within"],
+		textColor: ["dark", "dark-hover", "dark-active"]
 	},
 	plugins: [
 		require('@tailwindcss/typography')
