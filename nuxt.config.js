@@ -1,5 +1,5 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-const BASE_URL = process.env.npm_lifecycle_event === 'generate'? '/personal_website_v4/': ''
+const BASE_URL = '/personal_website_v4/'
 export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/color-mode',

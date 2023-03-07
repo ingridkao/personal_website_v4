@@ -1,5 +1,5 @@
 <script setup>
-    const publicURL = process.env.npm_lifecycle_event === 'generate'? '/personal_website_v4': ''
+    const BASE_URL = '/personal_website_v4/'
     const props = defineProps({
         path: {
             type: String,
@@ -13,7 +13,7 @@
 </script>
 <template>
     <img 
-        :src="`${publicURL}${props.path}`"
+        :src="`${BASE_URL}${props.path}`"
         :alt="props.alt"
         :title="props.alt"
         class="max-h-96 h-full my-0 mx-auto"
