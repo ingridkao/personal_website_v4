@@ -2,29 +2,41 @@
 
 html {
 	width: 100%;
-
 	--title-font: 'Noto Sans TC', Tahoma;
 	--body-font: 'Noto Serif TC', sans-serif;
 
-	--btnColor: #FE016C;
-    --bgColor: #232323;
-    --bodyColor: #f4f4f4;
-	&.dark-mode{
-		--btnColor: #FFBD07;
-		--bgColor: #f4f4f4;
-		--bodyColor: #232323;
+	--dark-color: #18181b;
+	--primary-color: #7dcfda;
+	
+	--secondary-color: #7dcfda;
+    --bodyBgColor: #f3f4f6;
+
+	.prose{
+		--tw-prose-bullets: var(--primary-color);
+		--tw-prose-headings: #18181b;
 	}
-	&.sepia-mode {
-		// --btnColor: #FFBD07;
-		// --bgColor: #f4f4f4;
-		// --bodyColor: #232323;
+
+	&.dark{
+		--secondary-color: #cdd38f;
+		--bodyBgColor: #27272a;
+		.prose{
+			--tw-prose-headings: #e6e6e6;
+			--tw-prose-bold: #fff;
+			--tw-prose-body: #c1c1c1;
+			--tw-prose-quotes: #c1c1c1;
+			--tw-prose-links: #8aaeb3;
+			--tw-prose-quote-borders: var(--primary-color);
+			--tw-prose-hr: var(--dark-color);
+		}
+		article{
+			border-color:  var(--dark-color);
+		}
 	}
 }
 
 body {
 	min-height: 100vh;
-	background: var(--bodyColor);
-	color: var(--bgColor);
+	background: var(--bodyBgColor);
 
 	font-family: var(--body-font);
 	font-weight: 200;
@@ -59,10 +71,28 @@ h6{
 
 .img{
     &-horizontal{
-		width: 80%;
+		width: 100%;
+		margin: auto;
     }
     &-vertical{
+		width: 80%;
+		margin: auto;
     }
 }
 
-
+em{
+	position: relative;
+	font-style: inherit;
+    padding: 0 0.25rem;
+	border-bottom: 2px solid var(--secondary-color);
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1rem;
+		background: var(--secondary-color);
+		left: 0;
+		bottom: 0;
+		opacity: 0.2;
+	}
+}

@@ -1,7 +1,11 @@
 <template>
-    <AppHeader />
-
-    <NuxtPage />
+    <AppHeader/>
+    <main class="relative 
+        bg-gray-100
+        dark:bg-zinc-800 dark:text-zinc-200
+    ">
+        <NuxtPage />
+    </main>
 </template>
 
 <style>

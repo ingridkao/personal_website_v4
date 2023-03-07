@@ -1,4 +1,5 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+const BASE_URL = process.env.npm_lifecycle_event === 'generate'? '/personal_website_v4/': ''
 export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/color-mode',
@@ -33,8 +34,8 @@ export default defineNuxtConfig({
 		}
 	},
 	app: {
-		baseURL: '/personal_website_v4/',
-		cdnUrl: process.env.npm_lifecycle_event === 'generate'? '/personal_website_v4/': '',
+		baseURL: BASE_URL,
+		cdnUrl: BASE_URL,
 		pageTransition: { 
 			name: 'page', 
 			mode: 'out-in'

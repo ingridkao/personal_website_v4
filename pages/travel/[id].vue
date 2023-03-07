@@ -4,6 +4,7 @@
         page,
         toc
     } = await useContent()
+    useContentHead(page)
 </script>
 
 <template>
@@ -11,6 +12,9 @@
         <header>
             <h2 v-if="page.title">{{page.title}}</h2>
             <p class="text-right text-xs">Update: {{page.modified}}</p>
+            <div v-if="page.tags" class="text-right text-xs">
+                <span v-for="tag in page.tags" :key="tag" class="rounded bg-gray-500 text-gray-100 opacity-6 px-2 py-0 ml-1">{{ tag }}</span>
+            </div>
             <div class="tocBox">
                 <h6>本文重點</h6>
                 <ul v-if="toc.links">

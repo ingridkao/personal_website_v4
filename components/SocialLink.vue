@@ -21,7 +21,7 @@
     ]
 </script>
 <template>
-    <div class="inline-flex w-full" :class="props.styles">
+    <div class="inline-flex" :class="props.styles">
         <a 
             v-for="(item, index) in socialLink" 
             :key="index" 
@@ -29,10 +29,12 @@
             :title="item.title"
             target="_blank" 
             rel="noreferrer noopenner"
-            class="rounded-lg p-3 cursor-pointer"
+            class="px-2"
         >
             <svg 
-                class="h-6 w-6 flex-shrink-0 fill-indigo-600"
+                class="h-6 w-6 
+                    fill-gray-500 hover:fill-gray-600 dark:hover:fill-gray-400
+                "
                 :viewBox="item.viewBox" 
                 data-view-component="true" 
                 aria-hidden="true" 
