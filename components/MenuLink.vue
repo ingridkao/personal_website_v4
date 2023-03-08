@@ -9,9 +9,13 @@
             href: '/travel'
         },
         {
-            name: 'Blog',
-            href: '/blog'
+            name: 'Read',
+            href: '/read'
         },
+        // {
+        //     name: 'Blog',
+        //     href: '/blog'
+        // },
     ]
 </script>
 <template>
@@ -19,7 +23,9 @@
     <NuxtLink 
         v-for="link in menuLink" :key="link.name" 
         :to="link.href"
-        class="text-base font-medium text-gray-500 hover:text-gray-600 dark:hover:text-gray-400"
+        class="text-base font-medium 
+            text-gray-500 hover:text-gray-600 dark:hover:text-gray-400
+        "
     >
         {{link.name}}
     </NuxtLink>

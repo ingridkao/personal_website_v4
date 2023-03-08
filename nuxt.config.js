@@ -47,7 +47,8 @@ export default defineNuxtConfig({
 		head: {
 		  title: 'IngridKao',
 		  meta: [
-			{ name: 'description', content: 'Ingridkao\'s site.' }
+			{ name: 'description', content: 'Ingridkao\'s site.' },
+			{ name: 'robots', content: 'index, follow' }
 		  ]
 		},
         link: [

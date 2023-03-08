@@ -1,11 +1,14 @@
 <template>
-    <AppHeader/>
-    <main class="relative 
+    <AppHeader class="sticky top-0 z-50"/>
+    
+    <div class="
+        prose max-w-2xl 
+        mx-auto my-0 px-4
         bg-gray-100
         dark:bg-zinc-800 dark:text-zinc-200
     ">
         <NuxtPage />
-    </main>
+    </div>
 </template>
 
 <style>

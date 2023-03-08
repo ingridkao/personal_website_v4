@@ -31,16 +31,18 @@
             rel="noreferrer noopenner"
             class="px-2"
         >
-            <svg 
-                class="h-6 w-6 
-                    fill-gray-500 hover:fill-gray-600 dark:hover:fill-gray-400
-                "
-                :viewBox="item.viewBox" 
-                data-view-component="true" 
-                aria-hidden="true" 
-            >
-                <path :d="item.svgPath"/>
-            </svg>
+            <ClientOnly>
+                <svg 
+                    class="h-6 w-6 
+                        fill-gray-500 hover:fill-gray-600 dark:hover:fill-gray-400
+                    "
+                    :viewBox="item.viewBox" 
+                    data-view-component="true" 
+                    aria-hidden="true" 
+                >
+                    <path :d="item.svgPath"/>
+                </svg>
+            </ClientOnly>
         </a>
     </div>
 </template>

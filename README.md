@@ -1,14 +1,15 @@
 # personal_website_v4
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+[Github page](https://ingridkao.github.io/personal_website_v4/)
 
 ## Setup
+Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
 ```bash
 # npm
 npm install
 ```
 
-## Development Server
+### Development Server
 ```bash
 npm run dev
 ```
@@ -17,7 +18,7 @@ npx nuxi dev
 ```
 Start the development server on http://localhost:3000
 
-## Production
+### Production
 Build the application for production:
 
 ```bash
@@ -28,6 +29,11 @@ Locally preview production build:
 
 ```bash
 npm run preview
+```
+
+### Cleaning up generated nuxt files and caches
+``` bash
+npx nuxi clean
 ```
 
 ## DevDependencies

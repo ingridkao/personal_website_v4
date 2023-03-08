@@ -1,7 +1,7 @@
 ---
-layout: about
+layout: read
 ---
 
-# about
+# read
 
 [Back home](/)
