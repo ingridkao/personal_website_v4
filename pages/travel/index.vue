@@ -1,12 +1,11 @@
 <script setup>
-    const navs = await queryContent('travel').find()
+    // const navs = await queryContent('travel').find()
 </script>
 
 <template>
     <main>
-        <div class="map">
-            <!-- 想做地圖 -->
-        </div>
-        <NavList v-if="navs" :navs="navs"/>
+        <!-- MapboxBox不要有動畫 -->
+        <MapboxBox/>
+        <!-- <NavList v-if="navs" :navs="navs"/> -->
     </main>
 </template>

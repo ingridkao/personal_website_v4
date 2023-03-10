@@ -1,6 +1,10 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 const BASE_URL = '/personal_website_v4/'
 export default defineNuxtConfig({
+	// ssr: false,
+	// nitro: {
+	//   preset: 'service-worker'
+	// },
 	modules: [
 		'@nuxtjs/color-mode',
 		'@nuxtjs/tailwindcss',
