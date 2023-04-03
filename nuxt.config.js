@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 	},
 	css: [
 		'~/assets/css/tailwind.css',
+		'~/assets/scss/tailwind.scss',
 		'~/assets/scss/main.scss'
 	],
 	styleResources: {

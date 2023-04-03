@@ -1,11 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.prose :where(a):not(:where([class~="not-prose"] *)) {
-    text-decoration-line: none;
-}
-
-.task-list-item::marker{
-    color: transparent;
-}

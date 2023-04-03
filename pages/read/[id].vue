@@ -8,11 +8,11 @@
 </script>
 
 <template>
-    <main v-if="page" >
-        <div class="cover">
-            <Images :path="page.image.src" :alt="page.image.alt"/>
+    <main v-if="page">
+        <div class="main_cover">
+            <Images :path="page.image.src" :alt="page.image.alt" class="max-w-2xl"/>
         </div>
-        <header class="mt-10">
+        <header class="main_title">
             <Info :page="page"/>
             <Toc v-if="toc" :toc="toc"/>
         </header>

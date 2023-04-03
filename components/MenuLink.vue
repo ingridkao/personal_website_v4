@@ -12,6 +12,10 @@
             name: 'Read',
             href: '/read'
         },
+        {
+            name: 'Investment',
+            href: '/investment'
+        },
         // {
         //     name: 'Blog',
         //     href: '/blog'
