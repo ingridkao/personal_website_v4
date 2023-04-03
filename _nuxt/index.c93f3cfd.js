@@ -1,0 +1,1 @@
+import e from"./MapboxBox.0f21a120.js";import{s as t,Z as n,o as _}from"./entry.2503f6b4.js";import"./_commonjsHelpers.28e086c5.js";const i={__name:"index",setup(r){return(a,c)=>{const o=e;return _(),t("main",null,[n(o)])}}};export{i as default};

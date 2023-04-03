@@ -1,0 +1,25 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        { 
+            "type": "Feature", 
+            "properties": { 
+                "name": "新加坡五天四夜",
+                "world": true,
+                "time": "202302",
+                "img":"",
+                "lists": [
+                    { "path": "/travel/singapore_mamamoo", "title": "跟著mamamoo去新加坡旅行" },
+                    { "path": "/travel/singapore_preparation", "title": "新加坡行前功課、入境及進入市區"},
+                    { "path": "/travel/singapore_hotel", "title": "一人的膠囊住宿"},
+                    { "path": "/travel/singapore_spot", "title": "獨自旅行的新加坡景點"},
+                    { "path": "/travel/singapore_food", "title": "新加坡美食"}
+                ]
+            }, 
+            "geometry": { 
+                "type": "Point", 
+                "coordinates": [ 103.831991 , 1.362927] 
+            } 
+        }
+    ]
+}
