@@ -7,6 +7,8 @@
     // mapboxgl.accessToken = 'pk.eyJ1IjoiaW5ncmlka2FvIiwiYSI6ImNsZXpzcHptNTAyZHczc29lanN0MGVxM2EifQ._eHJ0-DXCk6Hxz71UwhyXQ'
     mapboxgl.accessToken = 'pk.eyJ1IjoiaW5ncmlka2FvIiwiYSI6ImNsZXpzcXZoYjAyZTQzem80ZmtvdGFsYXcifQ.J__Gl_QgFIhLozjpSOZFRg'
 
+    const BASE_URL = '/personal_website_v4/'
+
     export default {
         setup() {
             const state = reactive({
@@ -37,7 +39,7 @@
                 state.mapEl.doubleClickZoom.disable()
                 state.mapEl.addSource('travel', {
                     type: 'geojson',
-                    data: '/data/travel.geojson'
+                    data: `${BASE_URL}/data/travel.geojson`
                 })
                 state.mapEl.addLayer({
                     id: 'travel-point',
