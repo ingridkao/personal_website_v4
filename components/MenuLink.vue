@@ -13,12 +13,8 @@
             href: '/read'
         },
         {
-            name: 'Investment',
-            href: '/investment'
-        },
-        {
-            name: 'Blog',
-            href: '/blog'
+            name: 'Murmur',
+            href: '/murmur'
         }
     ]
 </script>

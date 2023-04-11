@@ -40,6 +40,11 @@
             text-decoration-line: none;
         }
     }
+	.task-list-item{
+		input{
+			margin-right: .5rem;
+		}
+	}
 	>main{
 		position: relative;
 		.main_cover{
