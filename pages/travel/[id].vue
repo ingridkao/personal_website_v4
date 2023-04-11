@@ -8,19 +8,16 @@
 </script>
 
 <template>
-    <main v-if="page">
+    <main>
         <header class="main_title">
-            <Info :page="page"/>
+            <Info v-if="page" :page="page"/>
             <Toc v-if="toc" :toc="toc"/>
         </header>
         <article>
-            <ContentRenderer :key="page.id" :value="page" />
+            <ContentDoc />
         </article>
         <footer>
             <!-- 留言 -->
         </footer>
-    </main>
-    <main v-else>
-        Error
     </main>
 </template>

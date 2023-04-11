@@ -9,12 +9,13 @@
 
 <template>
     <nav class="flex flex-col justify-start">
-        <NuxtLink 
-            v-for="link in props.navs" 
-            :key="link.id"
-            :to="link._path"
-        >
-            {{link.title}}
-        </NuxtLink>
+        <span v-for="link in props.navs" :key="link.id">
+            <NuxtLink 
+                v-if="link._dir"
+                :to="link._path"
+            >
+                {{link.title}}
+            </NuxtLink>
+        </span>
     </nav>
 </template>
