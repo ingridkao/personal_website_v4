@@ -9,7 +9,7 @@
 
 <template>
     <main v-if="page">
-        <header>
+        <header class="main_title">
             <Info :page="page"/>
             <Toc v-if="toc" :toc="toc"/>
         </header>

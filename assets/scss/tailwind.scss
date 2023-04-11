@@ -4,7 +4,6 @@
 		padding-top: 6rem;
 	}
 	ul > li{
-		margin-bottom: 2rem;
 		li{
 			margin-bottom: .5rem;
 		}
@@ -31,6 +30,13 @@
     :where(h2):not(:where([class~="not-prose"] *)) {
         text-decoration-line: none;
         a{
+			text-decoration-line: none;
+        }
+    }
+    :where(h3):not(:where([class~="not-prose"] *)) {
+		text-decoration-line: none;
+        a{
+			color: var(--body-font);
             text-decoration-line: none;
         }
     }
@@ -77,12 +83,23 @@
 	}
 	.img{
 		&-horizontal{
+			display: inline;
+			flex-direction: row;
+			flex-wrap: wrap;
 			width: 100%;
-			margin: auto;
+			img{
+				flex: 2 2 auto;
+			}
+			@media only screen and (max-width:600px) {
+				flex-direction: column;
+			}
 		}
 		&-vertical{
 			width: 80%;
 			margin: auto;
+			img{
+				max-height: 30rem;
+			}
 		}
 	}
 	.callout{
