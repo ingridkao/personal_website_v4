@@ -27,7 +27,7 @@ const BASE_URL = '/personal_website_v4/'
                 :src="`${BASE_URL}${props.image.src}`"
                 class="rounded-t-lg my-0"
             />
-            <img v-else class="rounded-t-lg my-0" src="/docs/images/blog/image-1.jpg" alt="" />
+            <!-- <img v-else class="rounded-t-lg my-0" src="/docs/images/blog/image-1.jpg" alt="" /> -->
 
             <div class="p-5">
                 <h5 class="
