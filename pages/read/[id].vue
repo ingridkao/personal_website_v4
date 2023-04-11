@@ -10,7 +10,7 @@
 <template>
     <main v-if="page">
         <div class="main_cover">
-            <Images :path="page.image.src" :alt="page.image.alt" class="max-w-2xl"/>
+            <Images :path="page.image.src" :alt="page.image.alt"/>
         </div>
         <header class="main_title">
             <Info :page="page"/>

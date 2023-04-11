@@ -1,4 +1,5 @@
 .prose{
+	max-width: 60rem;
 	h2{
 		margin-top: 0;
 		padding-top: 6rem;
@@ -25,12 +26,15 @@
 		}
 	}
     :where(a):not(:where([class~="not-prose"] *)) {
-        text-decoration-line: underline;
+        text-decoration: none;
+    }
+    :where(a):not(:where([class="underline"] *)) {
+        text-decoration: underline;
     }
     :where(h2):not(:where([class~="not-prose"] *)) {
-        text-decoration-line: none;
+        text-decoration: none;
         a{
-			text-decoration-line: none;
+			text-decoration: none;
         }
     }
     :where(h3):not(:where([class~="not-prose"] *)) {
@@ -47,6 +51,13 @@
 	}
 	>main{
 		position: relative;
+		aside{
+			background: var(--asideBgColor);
+			padding: 1rem;
+		}
+		> footer{
+			margin-top: 2rem;
+		}
 		.main_cover{
 			position: absolute;
 			width: 100%;
@@ -121,7 +132,7 @@
 			height: 100%;
 			left: 0rem;
 			top: 0rem;
-			background-color: var(--tw-prose-headings);
+			background-color: var(--gray-color);
 			opacity: 0.1;
 			border-radius: .25rem;
 		}

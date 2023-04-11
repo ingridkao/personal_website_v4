@@ -7,10 +7,12 @@ html {
 
 	--dark-color: #18181b;
 	--white-color: #f3f4f6;
+	--gray-color: #dfdbdb;
 	--primary-color: #7dcfda;
 	
 	--secondary-color: #7dcfda;
     --bodyBgColor: var(--white-color);
+    --asideBgColor: #ececee;
 
 	.prose{
 		--tw-prose-bullets: var(--primary-color);
@@ -20,8 +22,9 @@ html {
 	&.dark{
 		--secondary-color: #cdd38f;
 		--bodyBgColor: #27272a;
+		--asideBgColor: #333337;
 		.prose{
-			--tw-prose-headings: #e6e6e6;
+			--tw-prose-headings: var(--gray-color);
 			--tw-prose-bold: var(--white-color);
 			--tw-prose-body: #c1c1c1;
 			--tw-prose-quotes: #c1c1c1;

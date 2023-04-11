@@ -10,7 +10,7 @@
     <a 
         target="_blank" 
         rel="noreferrer noopenner" 
-        class="text-s" 
+        class="text-s underline underline-offset-4 px-1" 
         :href="props.href"
     >
         <slot></slot>
