@@ -1,0 +1,1 @@
+import o from"./NavList.7cd52e2c.js";import{a0 as r,u as a,a as _,Z as c,z as m,Q as i,o as u}from"./entry.d0c0709f.js";const p={key:0},y={__name:"index",async setup(f){let e,t;const n=([e,t]=r(()=>i("murmur").find()),e=await e,t(),e);return(l,d)=>{const s=o;return a(n)?(u(),_("main",p,[c(s,{navs:a(n)},null,8,["navs"])])):m("",!0)}}};export{y as default};
