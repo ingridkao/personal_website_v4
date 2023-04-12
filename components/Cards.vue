@@ -1,4 +1,5 @@
 <script setup>
+const BASE_URL = '/personal_website_v4/'
 const props = defineProps({
     path: {
         type: String,
@@ -9,8 +10,6 @@ const props = defineProps({
         default: () => {}
     }
 })
-const BASE_URL = '/personal_website_v4/'
-
 </script>
 <template>
     <div class="
@@ -23,7 +22,7 @@ const BASE_URL = '/personal_website_v4/'
                 v-if="props.image" 
                 :path="props.image.src" 
                 :alt="props.image.alt"
-                :title="props.alt"
+                :title="props.image.alt"
                 :src="`${BASE_URL}${props.image.src}`"
                 class="rounded-t-lg my-0"
             />
@@ -43,7 +42,10 @@ const BASE_URL = '/personal_website_v4/'
                     <slot name="description"></slot>
                 </p>
             </div>
-            <footer class="w-full p-5 pt-0 inline-flex content-center justify-between">
+            <footer class="
+                w-full p-5 pt-0 
+                inline-flex content-center justify-between
+            ">
                 <slot name="footer"></slot>
             </footer>
         </NuxtLink>

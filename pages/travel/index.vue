@@ -12,6 +12,7 @@
     <main>
         <Toggles :label="'地圖顯示'" @toggle-change="handleOnChange"></Toggles>
         <MapboxBox v-if="state.toggle"/>
-        <NavList v-else-if="navs" :navs="navs"/>
+        <!-- <CardList v-else-if="navs" :articles="navs"/> -->
+        <Timeline v-else-if="navs" :articles="navs"/>
     </main>
 </template>
