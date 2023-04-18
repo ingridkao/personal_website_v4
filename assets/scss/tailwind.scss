@@ -28,7 +28,7 @@
     :where(a):not(:where([class~="not-prose"] *)) {
         text-decoration: none;
     }
-    :where(a):not(:where([class="underline"] *)) {
+    :where(a):where([class="underline"] *) {
         text-decoration: underline;
     }
     :where(h2):not(:where([class~="not-prose"] *)) {
@@ -44,6 +44,11 @@
             text-decoration-line: none;
         }
     }
+	:where(table):not(:where([class~="not-prose"] *)){
+		margin-left: 2rem;
+		width: calc(100% - 2rem);
+	}
+
 	.timeline li{
 		list-style: none;
 	}

@@ -1,5 +1,5 @@
 <script setup>
-    const navs = await queryContent('travel').find()
+    import Timeline from '@/components/list/Timeline.vue'
     const state = reactive({
         toggle: false
     })
@@ -10,9 +10,8 @@
 
 <template>
     <main>
-        <Toggles :label="'地圖顯示'" @toggle-change="handleOnChange"></Toggles>
+        <!-- <Toggles :label="'地圖顯示'" @toggle-change="handleOnChange"></Toggles> -->
         <MapboxBox v-if="state.toggle"/>
-        <!-- <CardList v-else-if="navs" :articles="navs"/> -->
-        <Timeline v-else-if="navs" :articles="navs"/>
+        <Timeline v-else :queryContent="'travel'"/>
     </main>
 </template>

@@ -11,11 +11,13 @@
         <div class="mx-auto max-w-7xl px-6">
             <div class="py-6 flex items-center justify-between md:space-x-10">
                 <div>
-                    <NuxtLink to="/">
-                        <span class="sr-only">IngridKao</span>
-                        <div class="h-8 w-auto sm:h-10">
+                    <NuxtLink to="/" class="inline-flex items-center">
+                        <div class="h-8 w-auto sm:h-10 mr-4">
                             <Images :path="'/img/icon.png'" :alt="'IngridKao icon'"></Images>
                         </div>
+                        <span class="sr-only md:not-sr-only text-base font-medium text-gray-500 hover:text-gray-600 dark:hover:text-gray-400">
+                            IngridKao
+                        </span>
                     </NuxtLink>
                 </div>
                 <div class="md:hidden">

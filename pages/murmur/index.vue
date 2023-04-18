@@ -1,9 +1,7 @@
 <script setup>
-    const navs = await queryContent('murmur').find()
+    import Timeline from '@/components/list/Timeline.vue'
 </script>
 
 <template>
-    <main v-if="navs" >
-        <NavList :navs="navs"/>
-    </main>
+    <Timeline :queryContent="'murmur'"/>
 </template>
