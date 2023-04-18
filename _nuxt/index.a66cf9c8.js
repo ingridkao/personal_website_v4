@@ -1,0 +1,1 @@
+import{_ as r}from"./Timeline.43513930.js";import{c as e,o}from"./entry.66795c36.js";import"./Tags.c148fa80.js";const s={__name:"index",setup(t){return(_,a)=>(o(),e(r,{queryContent:"murmur"}))}};export{s as default};
