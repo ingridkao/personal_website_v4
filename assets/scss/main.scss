@@ -17,6 +17,7 @@ html {
 	.prose{
 		--tw-prose-bullets: var(--primary-color);
 		--tw-prose-headings: #18181b;
+		--tw-prose-pre-bg: #65878b;
 	}
 
 	&.dark{
@@ -25,6 +26,7 @@ html {
 		--asideBgColor: #333337;
 		.prose{
 			--tw-prose-headings: var(--gray-color);
+			--tw-prose-pre-bg: #445355;
 			--tw-prose-bold: var(--white-color);
 			--tw-prose-body: #c1c1c1;
 			--tw-prose-quotes: #c1c1c1;

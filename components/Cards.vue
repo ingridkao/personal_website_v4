@@ -24,7 +24,7 @@ const props = defineProps({
                 :alt="props.image.alt"
                 :title="props.image.alt"
                 :src="`${BASE_URL}${props.image.src}`"
-                class="rounded-t-lg my-0"
+                class="rounded-t-lg my-0 mx-auto"
             />
             <!-- <img v-else class="rounded-t-lg my-0" src="/docs/images/blog/image-1.jpg" alt="" /> -->
 
