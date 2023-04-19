@@ -1,1 +1,0 @@
-import{o as t,a as e,F as o,b as p,t as l}from"./entry.66795c36.js";const d={__name:"Tags",props:{tags:{type:Array,default:()=>[]}},setup(a){const r=a;return(c,u)=>(t(),e("div",null,[(t(!0),e(o,null,p(r.tags,(s,n)=>(t(),e("span",{key:n,class:"bg-teal-100 dark:bg-teal-900 text-xs font-medium mr-2 px-2.5 py-0.5 rounded"},l(s),1))),128))]))}};export{d as _};

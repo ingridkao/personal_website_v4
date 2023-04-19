@@ -1,1 +1,0 @@
-import{o as n,a as o,r as s}from"./entry.66795c36.js";const a=["href"],p={__name:"Links",props:{href:{type:String,default:""}},setup(e){const r=e;return(t,l)=>(n(),o("a",{target:"_blank",rel:"noreferrer noopenner",class:"text-s underline underline-offset-4 px-1",href:r.href},[s(t.$slots,"default")],8,a))}};export{p as default};
