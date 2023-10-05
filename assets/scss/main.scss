@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,600|Noto+Serif+TC:200,600&display=swap');
-
 html {
 	width: 100%;
 	--title-font: 'Noto Sans TC', Tahoma;
@@ -9,22 +7,23 @@ html {
 	--white-color: #f3f4f6;
 	--gray-color: #dfdbdb;
 	--primary-color: #7dcfda;
-	
-	--secondary-color: #7dcfda;
-    --bodyBgColor: var(--white-color);
-    --asideBgColor: #ececee;
 
-	.prose{
+	--secondary-color: #7dcfda;
+	--bodyBgColor: var(--white-color);
+	--asideBgColor: #ececee;
+
+	.prose {
 		--tw-prose-bullets: var(--primary-color);
 		--tw-prose-headings: #18181b;
 		--tw-prose-pre-bg: #65878b;
 	}
 
-	&.dark{
+	&.dark {
 		--secondary-color: #cdd38f;
 		--bodyBgColor: #27272a;
 		--asideBgColor: #333337;
-		.prose{
+
+		.prose {
 			--tw-prose-headings: var(--gray-color);
 			--tw-prose-pre-bg: #445355;
 			--tw-prose-bold: var(--white-color);
@@ -34,37 +33,74 @@ html {
 			--tw-prose-quote-borders: var(--primary-color);
 			--tw-prose-hr: var(--dark-color);
 		}
-		article{
-			border-color:  var(--dark-color);
+
+		article {
+			border-color: var(--dark-color);
 		}
 	}
 }
 
 body {
-	min-height: 100vh;
 	background: var(--bodyBgColor);
-
 	font-family: var(--body-font);
 	font-weight: 200;
 }
 
-h1, h2{
+h1,
+h2 {
 	font-family: var(--title-font);
-    font-weight: 600;
+	font-weight: 600;
 }
 
-h3, h4, h5{
+h3,
+h4,
+h5 {
 	font-family: var(--title-font);
-    font-weight: 400;
+	font-weight: 400;
 }
 
-button, a{
+button,
+a {
 	font-family: var(--title-font);
-    font-weight: 400;
+	font-weight: 400;
 	cursor: pointer;
 }
 
-h6{
+h6 {
 	font-family: var(--body-font);
 	font-weight: 600;
 }
+  
+  section {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .bg {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// z-index: 0;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	text-align: center;
+  }
+  
+  h1 {
+	color: white;
+	text-shadow: 1px 1px 3px black;
+	z-index: 1;
+	font-size: 3em;
+	font-weight: 400;
+	margin-top: 10%;
+  }

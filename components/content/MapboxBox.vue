@@ -79,17 +79,17 @@
                 })
             }
             onMounted(()=> {
-                nextTick(() => {
-                    const mapboxExist = window.document.getElementById('mapContainer');
-                    if(mapboxExist){
-                        mapInit()
-                    }else{
-                        setTimeout(()=>mapInit(), 500)
-                    }
-                })
+                // nextTick(() => {
+                //     const mapboxExist = window.document.getElementById('mapContainer');
+                //     if(mapboxExist){
+                //         mapInit()
+                //     }else{
+                //         setTimeout(()=>mapInit(), 500)
+                //     }
+                // })
             })
             onUnmounted(()=>{
-                if(state.mapEl && state.mapEl.loaded()) state.mapEl.remove()
+                // if(state.mapEl && state.mapEl.loaded()) state.mapEl.remove()
             })
             return {
                 state,
@@ -101,7 +101,16 @@
 
 <template>
     <div id="mapContainer" class="relative overflow-hidden">
-        <div id="mapboxWrapper"></div>
+        <!-- <div id="mapboxWrapper"></div> -->
+        <MapboxMap
+            map-id="mapboxWrapper"
+            :options="{
+                style: 'mapbox://styles/mapbox/streets-v12', // style URL
+                center: [121.615011, 22.136127], // starting position [lng, lat]
+                zoom: 2.5, // starting zoom
+                maxZoom: 6
+            }"
+        />
         <div id="sidebar" class="sidebar absolute top-0 right-0 z-10 flex justify-center items-center w-64 h-full" :class="{collapsed: !state.toggle}">
             <div class="absolute w-full h-full flex justify-center items-center shadow-lg rounded-md bg-white text-slate-600">
                 <div>
