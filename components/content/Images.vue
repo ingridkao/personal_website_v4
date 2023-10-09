@@ -16,9 +16,6 @@
         :src="`${BASE_URL}${props.path}`"
         :alt="props.alt"
         :title="props.alt"
-        class="h-full mx-auto 
-            max-h-80 md:max-h-96
-            my-2 md:my-1
-        "
+        class="h-full"
     />
 </template>

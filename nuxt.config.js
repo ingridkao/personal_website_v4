@@ -12,7 +12,8 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxtjs/google-fonts',
 		'nuxt-gtag',
-		'nuxt-mapbox'
+		'nuxt-mapbox',
+		'dayjs-nuxt'
 	],
 	buildModules: [
 		'@nuxtjs/style-resources',
@@ -48,7 +49,8 @@ export default defineNuxtConfig({
 	googleFonts: {
         families: {
 			// Roboto: true,
-			'Noto+Sans+TC': [200, 500],
+			'Noto+Sans+TC': [400, 600],
+			'Noto+Serif+TC': [200, 600],
 			// Raleway: {
 			// 	wght: [100, 400],
 			//   	ital: [100]

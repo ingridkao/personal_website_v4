@@ -10,7 +10,7 @@
 <template>
     <main class="
         inline-grid gap-2 py-5
-        grid-cols-1 sm:grid-cols-2 
+        grid-cols-1 sm:grid-cols-3 lg:grid-cols-3
     ">
         <template v-for="link in props.articles" :key="link.id">
             <Cards 

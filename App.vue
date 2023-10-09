@@ -1,15 +1,17 @@
 <script setup></script>
 
 <template>
-    <AppHeader class="sticky top-0 z-50" />
-
-    <div class="
-        prose
-        mx-auto my-0 px-4
-        bg-gray-100
-        dark:bg-zinc-800 dark:text-zinc-200
+    <div class="noisepng 
+        bg-zinc-100 dark:bg-zinc-800
+        zinc-800 dark:text-zinc-200
     ">
-        <NuxtPage />
+        <AppHeader />
+    
+        <div class="prose mx-auto p-4">
+            <NuxtPage />
+        </div>
+
+        <AppFooter />
     </div>
 </template>
 

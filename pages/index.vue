@@ -1,5 +1,8 @@
 <script setup>
+import MileStone from '@/components/list/MileStone.vue'
+import ToDoList from '@/components/list/ToDoList.vue'
 import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -28,12 +31,14 @@ onNuxtReady(async () => {
 
 <template>
     <main>
-        <section v-for="item in 5" :key="item">
+        <MileStone />
+        <ToDoList />
+        <!-- <section v-for="item in 5" :key="item">
             <div class="bg" :style="{backgroundImage: `url(https://picsum.photos/600/400?random=${item})`}">
                 <h1>This</h1>
             </div>
-        </section>
-        <NuxtImg src="/img/icon.png" />
+        </section> -->
+        <!-- <NuxtImg src="/img/icon.png" /> -->
     </main>
 
 </template>

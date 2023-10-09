@@ -14,7 +14,7 @@ const props = defineProps({
 <template>
     <div class="
         border rounded-lg shadow 
-        max-w-m bg-white border-gray-200
+        max-w-m noisepng bg-zinc-100 border-gray-200
         dark:bg-gray-800 dark:border-gray-700
     ">
         <NuxtLink :to="props.path">

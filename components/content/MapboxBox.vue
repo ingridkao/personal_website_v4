@@ -112,7 +112,7 @@
             }"
         />
         <div id="sidebar" class="sidebar absolute top-0 right-0 z-10 flex justify-center items-center w-64 h-full" :class="{collapsed: !state.toggle}">
-            <div class="absolute w-full h-full flex justify-center items-center shadow-lg rounded-md bg-white text-slate-600">
+            <div class="absolute w-full h-full flex justify-center items-center shadow-lg rounded-md bg-zinc-100 text-slate-600">
                 <div>
                     <div v-if="state.target" :style="{backgroundImage: `url(${state.target.img})`}">
                         <h6>{{ state.target.name }}</h6>
@@ -127,7 +127,7 @@
                         {{item.title}}
                     </NuxtLink>
                 </div>
-                <button class="absolute -left-12 w-10 h-10 flex justify-center items-center shadow-md rounded-md bg-white hover:text-cyan-500 text-4xl overflow-visible" 
+                <button class="absolute -left-12 w-10 h-10 flex justify-center items-center shadow-md rounded-md bg-zinc-100 hover:text-cyan-500 text-4xl overflow-visible" 
                     :class="{collapsed: !state.toggle}"
                     @click="toggleSidebar"
                 >
