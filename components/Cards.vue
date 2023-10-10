@@ -18,25 +18,27 @@ const props = defineProps({
         dark:bg-gray-800 dark:border-gray-700
     ">
         <NuxtLink :to="props.path">
-            <img 
-                v-if="props.image" 
-                :path="props.image.src" 
-                :alt="props.image.alt"
-                :title="props.image.alt"
-                :src="`${BASE_URL}${props.image.src}`"
-                class="rounded-t-lg my-0 mx-auto"
-            />
-            <!-- <img v-else class="rounded-t-lg my-0" src="/docs/images/blog/image-1.jpg" alt="" /> -->
+            <div v-if="props.image" class="w-full h-56">
+                <!-- <img 
+                    :src="`${BASE_URL}${props.image.src}`"
+                    class="rounded-t-lg my-0 mx-auto min-h-max"
+                /> -->
+                <NuxtImg 
+                    :src="`${props.image.src}`" 
+                    :alt="props.image.alt"
+                    class="rounded-t-lg my-0 h-full"
+                />
+            </div>
 
-            <div class="p-5">
-                <h5 class="
-                    mb-2 text-xl font-bold 
+            <div class="px-5">
+                <h4 class="
+                    mb-2 text-lg font-bold
                     text-gray-900 dark:text-white
                 ">
                     <slot name="title"></slot>
-                </h5>
+                </h4>
                 <p class="
-                    mb-3 font-normal 
+                    mb-3 font-normal h-44
                     text-gray-700 dark:text-gray-400
                 ">
                     <slot name="description"></slot>

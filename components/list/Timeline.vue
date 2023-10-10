@@ -8,7 +8,7 @@
         }
     })
     const state = reactive({
-        allArticles: await queryContent(props.queryContent).find(),
+        allArticles: await queryContent(props.queryContent).sort({ id: -1}).find(),
         filterArticles: [],
         selectTag : [],
         showNavs: computed(()=>{

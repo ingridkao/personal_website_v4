@@ -102,7 +102,7 @@ export default [
     { done: true, name: '在日本泡溫泉'},
     { done: true, name: '在富士山下看日出'},
     { done: false, name: '去和藏王樹冰合照'},
-    { done: true, name: '在香港看夜景'},
+    { done: true, name: '去一次吳哥窟'},
     { done: true, name: '去新加坡吃海南雞飯', link: 'travel/singapore_zone2'},
     { done: false, name: '在沙漠中騎駱駝'},
     { done: false, name: '看金字塔和人面獅身合照'},

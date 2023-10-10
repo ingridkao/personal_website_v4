@@ -1,5 +1,5 @@
 <script setup>
-    const navs = await queryContent('read').find()
+    const navs = await queryContent('read').sort({ id: -1}).find()
 </script>
 
 <template>

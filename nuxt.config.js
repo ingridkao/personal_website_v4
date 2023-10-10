@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 			// Roboto: true,
 			'Noto+Sans+TC': [400, 600],
 			'Noto+Serif+TC': [200, 600],
+			'Caveat': [400],
 			// Raleway: {
 			// 	wght: [100, 400],
 			//   	ital: [100]

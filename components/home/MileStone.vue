@@ -1,7 +1,6 @@
 <script setup name="MileStone">
 import { computed } from 'vue'
 import milestones, { yearStart } from '@/assets/js/milestone.js'
-// const BASE_URL = '/personal_website_v4/'
 const yearArray = computed(()=>{
     console.log(useDayjs().year());
     const array = []
@@ -16,7 +15,7 @@ const yearArray = computed(()=>{
         <h4>Milestone</h4>
         <div class="
             snap-x milestone-grid 
-            grid gap-4 
+            grid gap-8 
             w-full p-4
         "
         :style="{'grid-template-columns': `repeat(${yearArray.length}, 14rem)`}">
@@ -38,14 +37,16 @@ const yearArray = computed(()=>{
                                     </ClientOnly>
                                 </NuxtLink>
                             </template>
-
                         </h6>
                         <p class="mt-0">
                             <span>{{ item.start }}</span>
-                            <span v-if="item.end"> - {{ item.end }}</span>
-                            <div v-if="item.img" class="h-8 w-auto sm:h-10 ">
-                                <NuxtImg :src="item.img" class="mt-0"/>
-                            </div>
+                            <template v-if="item.end">
+                                -
+                                <span v-if="item.end === 'now'">
+                                    {{ `${useDayjs().format('YYYYMM')}` }}
+                                </span>
+                                <span v-else> {{ item.end }}</span>
+                            </template>
                             <template v-if="item.link">
                                 <a v-for="(linkItem, linkIndex) in item.link" :key="linkIndex" 
                                     target="_blank" :href="linkItem.link"
@@ -54,6 +55,9 @@ const yearArray = computed(()=>{
                                     {{ linkItem.name }}
                                 </a>
                             </template>
+                            <div v-if="item.img" class="w-full milestone-img">
+                                <NuxtImg :src="item.img" class="h-full m-0"/>
+                            </div>
                         </p>
                     </div>
                 </div>
@@ -69,7 +73,14 @@ const yearArray = computed(()=>{
         // grid-template-columns: repeat(30, 14rem);
 	    overflow-x: scroll;
         overflow-y: hidden;
-        height: 25rem;
+        height: 32rem;
 	}
+    &-img{
+        transition: opacity .8s;
+        opacity: .7;
+        &:hover{
+            opacity: 1;
+        }
+    }
 }
 </style>
