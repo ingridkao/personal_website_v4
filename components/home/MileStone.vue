@@ -1,10 +1,12 @@
 <script setup name="MileStone">
 import { computed } from 'vue'
+import { useDayjs } from '#dayjs' 
 import milestones, { yearStart } from '@/assets/js/milestone.js'
+const dayjs = useDayjs()
+
 const yearArray = computed(()=>{
-    console.log(useDayjs().year());
     const array = []
-    for (let y = yearStart; y <= useDayjs().year(); y++) {
+    for (let y = yearStart; y <= dayjs().year(); y++) {
         array.push(y)
     }
     return array.reverse()
@@ -43,7 +45,7 @@ const yearArray = computed(()=>{
                             <template v-if="item.end">
                                 -
                                 <span v-if="item.end === 'now'">
-                                    {{ `${useDayjs().format('YYYYMM')}` }}
+                                    {{ `${$dayjs().format('YYYYMM')}` }}
                                 </span>
                                 <span v-else> {{ item.end }}</span>
                             </template>

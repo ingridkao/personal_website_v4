@@ -53,8 +53,8 @@
             </div>
             <p>
                 希望40歲前可以完成50%，距離40歲
+                <b>{{ $dayjs().diff('2027-01-02', 'day') }}天</b>
             </p>
-            <b>{{ useDayjs().diff('2027-01-02', 'day') }}天</b>
         </div>
     </section>
 </template>
