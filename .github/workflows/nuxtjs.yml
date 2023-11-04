@@ -1,13 +1,9 @@
-# Sample workflow for building and deploying a Nuxt site to GitHub Pages
-
 name: Deploy Nuxt site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Allow one concurrent deployment
@@ -23,8 +19,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [18]
-        npm-version: [7]
+        node-version: [16]
 
     steps:
       - name: Checkout🛎
@@ -43,7 +38,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: modules-${{ hashFiles('yarn-lock.yaml') }}
+          key: modules-${{ hashFiles('yarn.lock') }}
 
       - name: Install Dependencies 👨🏻‍💻
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
@@ -58,5 +53,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .output/public
+          #publish_dir: .output/public
+          publish_dir: ./dist  # Adjust this to your actual publish directory
           cname: www.ingridkao.net
