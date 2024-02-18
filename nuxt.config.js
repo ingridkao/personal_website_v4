@@ -10,10 +10,10 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'@nuxt/content',
 		'@nuxt/image',
-		'@nuxtjs/google-fonts',
 		'nuxt-gtag',
 		'nuxt-mapbox',
-		'dayjs-nuxt'
+		'dayjs-nuxt',
+		'@nuxtjs/google-fonts'
 	],
 	buildModules: [
 		'@nuxtjs/style-resources',
@@ -46,18 +46,6 @@ export default defineNuxtConfig({
 			fields: ['publishedAt']
 		}
 	},
-	googleFonts: {
-        families: {
-			// Roboto: true,
-			'Noto+Sans+TC': [400, 600],
-			'Noto+Serif+TC': [200, 600],
-			'Caveat': [400],
-			// Raleway: {
-			// 	wght: [100, 400],
-			//   	ital: [100]
-			// },
-		}
-	},
 	gtag: {
 		id: 'G-Q897XJT2E0',
 		config: {
@@ -66,6 +54,14 @@ export default defineNuxtConfig({
 	},
 	mapbox: {
 		accessToken: 'pk.eyJ1IjoiaW5ncmlka2FvIiwiYSI6ImNsZXpzcXZoYjAyZTQzem80ZmtvdGFsYXcifQ.J__Gl_QgFIhLozjpSOZFRg'
+	},
+	googleFonts: {
+		download: false,
+		families: {
+			'Noto+Sans+TC': [400, 600],
+			'Noto+Serif+TC': [200, 600],
+			'Caveat': [400]
+		}
 	},
 	app: {
 		baseURL: BASE_URL,
@@ -79,14 +75,14 @@ export default defineNuxtConfig({
 			mode: 'out-in'
 		},
 		head: {
-		  title: 'IngridKao',
-		  meta: [
-			{ name: 'description', content: 'Ingridkao\'s site.' },
-			{ name: 'robots', content: 'index, follow' }
-		  ]
+			title: 'IngridKao',
+			meta: [
+				{ name: 'description', content: 'Ingridkao\'s site.' },
+				{ name: 'robots', content: 'index, follow' }
+			]
 		},
-        link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+		link: [
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ],
 		script: [
 			{ src: "/js/analitics.js" },

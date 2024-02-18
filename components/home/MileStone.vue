@@ -45,7 +45,7 @@ const yearArray = computed(()=>{
                             <template v-if="item.end">
                                 -
                                 <span v-if="item.end === 'now'">
-                                    {{ `${$dayjs().format('YYYYMM')}` }}
+                                    {{ `${dayjs().format('YYYYMM')}` }}
                                 </span>
                                 <span v-else> {{ item.end }}</span>
                             </template>

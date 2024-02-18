@@ -97,6 +97,5 @@ npm install -D @nuxtjs/tailwindcss
 
 
 1. (Nuxt img)[https://image.nuxt.com/usage/nuxt-img]
-2. (Nuxt Google Fonts)[https://google-fonts.nuxtjs.org/]
-3. (Nuxt gtag)[https://github.com/johannschopplich/nuxt-gtag]
-4. (Nuxt mapbox)[https://nuxt.com/modules/nuxt-mapbox]
+2. (Nuxt gtag)[https://github.com/johannschopplich/nuxt-gtag]
+3. (Nuxt mapbox)[https://nuxt.com/modules/nuxt-mapbox]

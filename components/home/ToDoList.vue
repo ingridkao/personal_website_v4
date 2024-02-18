@@ -1,6 +1,8 @@
 <script setup name="ToDoList">
     import { computed } from 'vue'
+    import { useDayjs } from '#dayjs' 
     import todoList from '@/assets/js/todoList.js'
+    const dayjs = useDayjs()
     const achievingrate = computed(()=>{
         if(todoList.length > 0){
             const count = todoList.filter(item => item.done)
@@ -53,7 +55,7 @@
             </div>
             <p>
                 希望40歲前可以完成50%，距離40歲
-                <b>{{ $dayjs().diff('2027-01-02', 'day') }}天</b>
+                <b>{{ dayjs().diff('2027-01-02', 'day') }}天</b>
             </p>
         </div>
     </section>
